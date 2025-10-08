@@ -1,0 +1,32 @@
+cff-version: 1.2.0
+title: Demonstrator for SUNRISE - A Scalable Restful Interface for System Evaluation
+message: If you use this software, please cite it using the metadata from this file.
+type: software
+authors:
+  - given-names: Tim
+    family-names: Kraus
+    email: tim.kraus@bosch.com
+    affiliation: Robert Bosch GmbH
+  - given-names: Axel
+    family-names: Sauer
+    email: axel.sauer@bosch.com
+    affiliation: Robert Bosch GmbH
+  - given-names: Ingo
+    family-names: Feldner
+    affiliation: Robert Bosch GmbH
+    email: ingo.feldner@bosch.com
+repository-code: 'https://github.com/boschresearch/sunrise.demonstrator'
+abstract: >-
+  SUNRISE stands for Scalable Unified RESTful Infrastructure for System
+  Evaluation. It provides users a unified approach to utilizing simulation
+  technologies (typically but not limited to virtual prototyping). The goal is
+  to facilitate access to various different solutions and boost cooperation by
+  leveraging decentralized compute resources and definition of open APIs.
+keywords:
+  - Simulation
+  - Virtual Prototyping
+  - HW/SW Codesign
+  - Containerization
+  - Cloud Computing
+  - REST API
+license: Apache-2.0
