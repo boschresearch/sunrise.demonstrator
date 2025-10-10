@@ -1,0 +1,45 @@
+services:
+  runtime_manager:
+    image: sunrise-demo-runtimemanager
+    build:
+      dockerfile: runtime_manager/Dockerfile
+      context: .
+    environment:
+      - SUNRISE_RUNTIME_MANAGER_PORT=${RUNTIME_MANAGER_PORT}
+    ports:
+      - ${RUNTIME_MANAGER_PORT}:${RUNTIME_MANAGER_PORT}
+    networks:
+      - sunrise-network
+    volumes:
+      - ${DOCKER_SOCKET}:/var/run/docker.sock
+
+  user_interface:
+    image: sunrise-demo-userinterface
+    build:
+      dockerfile: user_interface/Dockerfile
+      context: .
+    depends_on:
+      - runtime_manager
+    environment:
+      - STREAMLIT_SERVER_PORT=${USER_INTERFACE_PORT}
+      - RUNTIME_MANAGER_URL=http://runtime_manager
+      - RUNTIME_MANAGER_PORT=${RUNTIME_MANAGER_PORT}
+      - NO_PROXY=${NO_PROXY:-},runtime_manager
+      - no_proxy=${no_proxy:-},runtime_manager
+    ports:
+      - ${USER_INTERFACE_PORT}:${USER_INTERFACE_PORT}
+    networks:
+      - sunrise-network
+
+  system:
+  # The system should only be built and not executed, as this is done by the RM itself
+    image: sunrise-demo-system
+    build: ./demo_system
+    command: ["true"]
+    deploy:
+       restart_policy:
+         condition: none
+
+networks:
+  sunrise-network:
+    driver: bridge

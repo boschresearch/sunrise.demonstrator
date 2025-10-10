@@ -1,0 +1,13 @@
+{
+  "systems": [
+    {
+      "id": null,
+      "name": "Demo System",
+      "version": "0.1",
+      "description": "SUNRISE Demonstrator System",
+      "type": "dir",
+      "location": "demo_system",
+      "branch": ""
+    }
+  ]
+}

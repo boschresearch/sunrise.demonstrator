@@ -8,7 +8,49 @@ The goal is to facilitate access to diverse simulation solutions and boost coope
 
 
 ## Getting Started
-**This is in work :construction:**
+### Repository Structure
+This project provides a comprehensive setup for all typical components within the SUNRISE environment:
+- The  [:file_folder: runtime_manager](runtime_manager/) subdirectory contains the implementation of a Server application that acts as SUNRISE Runtime Manager.
+- The [:file_folder: user_interface](user_interface/) folder contains a demonstrator for a Front End in SUNRISE.
+- In the [:file_folder: demo_system](demo_system/) directory, a very basic example of a system can be found.
+
+### Running the demonstrator
+It is highly recommended to run this example with Docker, as all sub-components are containerized.
+To orchestrate everything together, we utilize [Docker Compose](docker-compose.yml).
+
+- :hammer_and_wrench: **Preparation**
+  - Configure the **ports** on which the servers will listen in the [.env-file](.env).
+  - Configure the **Docker socket** that the Runtime Manager operates on in the [.env-file](.env). Hint: Call `docker context ls` from a UNIX shell to identify your current docker socket.
+- :arrow_forward: **Execution Steps (from a UNIX Shell)**\
+    First, build the Docker images:
+    ```sh
+    # Build the Docker images for all sub-components
+    docker compose build
+    ```
+
+    To run the containers _interactively_:
+    ```sh
+    # Start the Docker containers with an interactive shell (Use CTRL-C to stop and exit)
+    docker compose -p sunrise_demonstrator up
+
+    # Remove the containers completely to clean up
+    docker compose -p sunrise_demonstrator rm -f
+    ```
+
+    Alternatively, run the containers in the _background_:
+    ```sh
+    # Start the Docker containers in detached mode
+    docker compose -p sunrise_demonstrator up -d
+
+    # Check the logs of the containers that run in the background
+    docker compose -p sunrise_demonstrator logs
+
+    # Shut down the containers
+    docker compose -p sunrise_demonstrator down
+    ```
+    _Note: Only the `runtime_manager` and `user_interface` services from the Docker Compose file are intended to run continuously. The `system` service will intentionally terminate directly. For the system, Docker Compose is only used to trigger the image build, which is then started later by the Runtime Manager._
+- :globe_with_meridians: **Accessing the User Interface**\
+  Once the containers are up and running, you can access the front-end through your web browser using the port you configured. The default address to access the UI is: **[http://localhost:9999](http://localhost:9999)**.
 
 
 ## Contributing
