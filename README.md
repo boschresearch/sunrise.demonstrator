@@ -6,6 +6,10 @@ This repository provides a minimal demonstration of the **SUNRISE** infrastructu
 **SUNRISE** stands for _**S**calable **Un**ified **R**ESTful **I**nfrastructure for **S**ystem **E**valuation_. It offers users a uniform approach to utilizing simulation technologies, typically, but not limited to the context of virtual prototyping.
 The goal is to facilitate access to diverse simulation solutions and boost cooperation by leveraging decentralized compute resources and defining open APIs.
 
+For more information, take a look at the [publications](#citing) listed below.
+
+![SUNRISE components](doc/sunrise_overview.svg)
+
 
 ## Getting Started
 ### Repository Structure
@@ -14,10 +18,11 @@ This project provides a comprehensive setup for all typical components within th
 - The [:file_folder: user_interface](user_interface/) folder contains a demonstrator for a Front End in SUNRISE.
 - In the [:file_folder: demo_system](demo_system/) directory, a very basic example of a system can be found.
 
-### Running the demonstrator
-It is highly recommended to run this example with Docker, as all sub-components are containerized.
-To orchestrate everything together, we utilize [Docker Compose](docker-compose.yml).
-
+### Running the Demonstrator
+- :clipboard: **Prerequisites:**
+  - A Linux operating system
+  - The Docker runtime installed and running
+  - Docker Compose to orchestrate everything (usually included with Docker Desktop)
 - :hammer_and_wrench: **Preparation**
   - Configure the **ports** on which the servers will listen in the [.env-file](.env).
   - Configure the **Docker socket** that the Runtime Manager operates on in the [.env-file](.env). Hint: Call `docker context ls` from a UNIX shell to identify your current docker socket.
@@ -68,7 +73,8 @@ This work is published under the [Apache License 2.0](LICENSE).
 ## Citing
 Cite this work as defined in the included [citation file](CITATION.cff).
 
-**Publications Related to SUNRISE:**
+**Publications related to SUNRISE:**
+- _Cloud-Enabled Virtual Prototypes_,  DVCon Europe 2025
 - _Deployment of Containerized Simulations in an API-Driven Distributed Infrastructure_, DVCon Europe 2024,
 https://doi.org/10.48550/arXiv.2506.10642
 - _Scalable Software Testing in Fast Virtual Platforms: Leveraging SystemC, QEMU and Containerization_, DVCon China 2025, https://doi.org/10.48550/arXiv.2506.10624
