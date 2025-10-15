@@ -24,6 +24,7 @@ This project provides a comprehensive setup for all typical components within th
   - The Docker runtime installed and running
   - Docker Compose to orchestrate everything (usually included with Docker Desktop)
 - :hammer_and_wrench: **Preparation**
+  - Initialize submodule dependencies by calling `git submodule update --init`.
   - Configure the **ports** on which the servers will listen in the [.env-file](.env).
   - Configure the **Docker socket** that the Runtime Manager operates on in the [.env-file](.env). Hint: Call `docker context ls` from a UNIX shell to identify your current docker socket.
 - :arrow_forward: **Execution Steps (from a UNIX Shell)**\
