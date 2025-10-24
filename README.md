@@ -6,7 +6,7 @@ This repository provides a minimal demonstration of the **SUNRISE** infrastructu
 **SUNRISE** stands for _**S**calable **Un**ified **R**ESTful **I**nfrastructure for **S**ystem **E**valuation_. It offers users a uniform approach to utilizing simulation technologies, typically, but not limited to the context of virtual prototyping.
 The goal is to facilitate access to diverse simulation solutions and boost cooperation by leveraging decentralized compute resources and defining open APIs.
 
-For more information, take a look at the [publications](#citing) listed below.
+For more information, take a look at the [**documentation**](https://boschresearch.github.io/sunrise.documentation/) and the [publications](#citing) listed below.
 
 ![SUNRISE components](doc/sunrise_overview.svg)
 
@@ -79,6 +79,7 @@ Cite this work as defined in the included [citation file](CITATION.cff).
 - _Deployment of Containerized Simulations in an API-Driven Distributed Infrastructure_, DVCon Europe 2024,
 https://doi.org/10.48550/arXiv.2506.10642
 - _Scalable Software Testing in Fast Virtual Platforms: Leveraging SystemC, QEMU and Containerization_, DVCon China 2025, https://doi.org/10.48550/arXiv.2506.10624
+- _Cloud-Enabled Virtual Prototypes: Bridging Local and Remote Simulation_, DVCon Europe 2025, https://doi.org/10.48550/arXiv.2510.15355
 
 
 ## Acknowledgments
