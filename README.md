@@ -19,6 +19,12 @@ This project provides a comprehensive setup for all typical components within th
 - In the [:file_folder: demo_system](demo_system/) directory, a very basic example of a system can be found.
 
 ### Running the Demonstrator
+
+> [!TIP]
+> The steps below describe how to use the demonstrator on individual environments. Alternatively, GitHub Codespaces can be used to run the demonstrator in a pre-configured cloud environment without any local setup. Use a GitHub account and click on the following link to open a codespace.
+>
+> [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/boschresearch/sunrise.demonstrator)
+
 - :clipboard: **Prerequisites:**
   - A Linux operating system
   - The Docker runtime installed and running
