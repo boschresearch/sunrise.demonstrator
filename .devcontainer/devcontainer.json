@@ -2,5 +2,19 @@
   "image": "mcr.microsoft.com/devcontainers/base:ubuntu-24.04",
   "features": {
     "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {}
-  }
+  },
+  "forwardPorts": [9998, 9999],
+  "portsAttributes": {
+    "9998": {
+      "label": "EvalAPI",
+      "protocol": "http",
+      "onAutoForward": "notify"
+    },
+    "9999": {
+      "label": "Website",
+      "protocol": "http",
+      "onAutoForward": "openBrowser"
+    }
+  },
+  "postStartCommand": "git submodule update --init"
 }
