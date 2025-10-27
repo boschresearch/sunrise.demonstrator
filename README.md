@@ -81,7 +81,6 @@ This work is published under the [Apache License 2.0](LICENSE).
 Cite this work as defined in the included [citation file](CITATION.cff).
 
 **Publications related to SUNRISE:**
-- _Cloud-Enabled Virtual Prototypes_,  DVCon Europe 2025
 - _Deployment of Containerized Simulations in an API-Driven Distributed Infrastructure_, DVCon Europe 2024,
 https://doi.org/10.48550/arXiv.2506.10642
 - _Scalable Software Testing in Fast Virtual Platforms: Leveraging SystemC, QEMU and Containerization_, DVCon China 2025, https://doi.org/10.48550/arXiv.2506.10624
