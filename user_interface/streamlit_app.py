@@ -74,7 +74,10 @@ if "mnl_params_locked" not in st.session_state:
 
 
 # BUILD GUI ELEMENTS ###################################################################################################
-st.set_page_config(page_title="SUNRISE Front-End Demo", initial_sidebar_state="collapsed")
+st.set_page_config(page_title="SUNRISE Front-End Demo", page_icon="img/sunrise_icon.ico",
+                   initial_sidebar_state="collapsed")
+
+st.image("img/sunrise_logo.svg", width=175)
 st.title("SUNRISE Workflow")
 
 # Runtime Manager Connection
