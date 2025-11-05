@@ -25,7 +25,7 @@ class MarkdownImageEmbedder:
     """Embeds images as base64-encoded string into a markdown file."""
 
     # regular expression to match markdown images
-    _markdown_image_regex = r"!\[(.*?)\]\((.*?)\)"
+    _markdown_image_regex = r"!\[(.*?)\]\(\s*(?!https?://)(.*?)\s*\)"
 
     def __init__(self, input_markdown: str, markdown_dir: os.PathLike) -> None:
         self.input_markdown = input_markdown

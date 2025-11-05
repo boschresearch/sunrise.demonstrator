@@ -481,6 +481,7 @@ class System:
             if not isinstance(files, list):
                 files = [files]
             for file in files:
+                os.makedirs(os.path.dirname(tmp_dir_obj / file), exist_ok=True)
                 shutil.copyfile(pathlib.Path(sysref.location) / file, tmp_dir_obj / file)
             return tmp_repo
         # check if sysref is a docker image -> only sysdef.json can be extracted from image label
