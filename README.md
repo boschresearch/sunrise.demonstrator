@@ -85,6 +85,7 @@ Cite this work as defined in the included [citation file](CITATION.cff).
 https://doi.org/10.48550/arXiv.2506.10642
 - _Scalable Software Testing in Fast Virtual Platforms: Leveraging SystemC, QEMU and Containerization_, DVCon China 2025, https://doi.org/10.48550/arXiv.2506.10624
 - _Cloud-Enabled Virtual Prototypes: Bridging Local and Remote Simulation_, DVCon Europe 2025, https://doi.org/10.48550/arXiv.2510.15355
+- _Invited Paper: Rapid Performance Evaluation and Optimized AI Inference for Heterogeneous Automotive Chiplets_, 2025 IEEE/ACM International Conference On Computer Aided Design (ICCAD), https://doi.org/10.1109/ICCAD66269.2025.11240996
 
 
 ## Acknowledgments
