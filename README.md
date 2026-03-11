@@ -49,6 +49,26 @@ This project provides a comprehensive setup for all typical components within th
     docker compose -p sunrise_demonstrator rm -f
     ```
 
+    The expected output is similar to:
+    ```
+      [+] up 3/3
+      ✔ Container sunrise_demonstrator-runtime_manager-1     Created             0.7s
+      ✔ Container sunrise_demonstrator-system-1              Created             1.3s
+      ✔ Container sunrise_demonstrator-user_interface-1      Created             0.8s
+      Attaching to runtime_manager-1, system-1, user_interface-1
+      system-1 exited with code 0
+      runtime_manager-1  | 2026-02-11 09:13:30,572 INFO:     Started server process [7]
+      runtime_manager-1  | 2026-02-11 09:13:30,572 INFO:     Waiting for application startup.
+      runtime_manager-1  | 2026-02-11 09:13:30,572 INFO:     Application startup complete.
+      runtime_manager-1  | 2026-02-11 09:13:30,572 INFO:     Uvicorn running on http://0.0.0.0:9998 (Press CTRL+C to quit)
+      user_interface-1   |
+      user_interface-1   |   You can now view your Streamlit app in your browser.
+      user_interface-1   |
+      user_interface-1   |   Local URL: http://localhost:9999
+      user_interface-1   |   Network URL: http://172.19.0.3:9999
+      user_interface-1   |   External URL: http://xxx.xxx.xxx.xxx:9999
+    ```
+
     Alternatively, run the containers in the _background_:
     ```sh
     # Start the Docker containers in detached mode

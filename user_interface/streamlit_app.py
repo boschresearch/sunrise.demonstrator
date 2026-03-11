@@ -228,7 +228,7 @@ if connected:
                 elif result.type == dataformats.resultformats.ResultTypes.SIM_SPEED:
                     uiu.display_result_simspeed(result.data)
                 else:
-                    st.info(f"Visualization of result '{result.name}' is not supported (incompatible type)")
+                    st.info(f"Embedded visualization of result '{result.name}' is not implemented.")
         elif ses_stat in [dataformats.State.FAILED_BUILD, dataformats.State.FAILED_RUN]:
             st.status("**Workflow execution failed**",
                       state="error").markdown(f"Experiment Status: `{ses_stat.value}`")
