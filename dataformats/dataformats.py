@@ -14,7 +14,7 @@
 import datetime
 import enum
 import os
-from typing import Union, Optional
+from typing import Union, Optional, Any
 import pydantic
 from . import resultformats
 
@@ -142,11 +142,11 @@ class SysDef(pydantic.BaseModel):
                         raise ValueError(f"Enabling parameter must be of type bool: '{enabler}'")
         return self
 
-    def __getitem__(self, item):
+    def __getitem__(self, item: str) -> Any:
         """Make class indexable e.g. to read parameter groups with name: my_sysdef["build_parameters"]"""
         return getattr(self, item)
 
-    def __setitem__(self, item, value):
+    def __setitem__(self, item: str, value: Any) -> None:
         """Make class indexable e.g. to writer parameter groups with name: my_sysdef["build_parameters"] = {...}"""
         return setattr(self, item, value)
 
@@ -171,11 +171,11 @@ class SysCfg(pydantic.BaseModel):
     build_parameters: Optional[dict[str, Union[str, bool, int, float, SysCfgUrlParameter, None]]] = None
     run_parameters: Optional[dict[str, Union[str, bool, int, float, SysCfgUrlParameter, None]]] = None
 
-    def __getitem__(self, item):
+    def __getitem__(self, item: str) -> Any:
         """Make class indexable e.g. to read parameter groups with name: my_syscfg["build_parameters"]"""
         return getattr(self, item)
 
-    def __setitem__(self, item, value):
+    def __setitem__(self, item: str, value: Any) -> None:
         """Make class indexable e.g. to writer parameter groups with name: my_syscfg["build_parameters"] = {...}"""
         return setattr(self, item, value)
 

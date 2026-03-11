@@ -13,6 +13,7 @@
 
 import csv
 import enum
+import os
 from typing import Union, Optional
 import pydantic
 
@@ -73,11 +74,11 @@ class FunctionProfileData(pydantic.BaseModel):
 
 class FunctionProfile:
     """Overall function profiling result table, typically from parsing a CSV file"""
-    def __init__(self, function_data_list: list[FunctionProfileData]):
+    def __init__(self, function_data_list: list[FunctionProfileData]) -> None:
         self.functions = function_data_list
 
     @classmethod
-    def from_csv_file(cls, filepath):
+    def from_csv_file(cls, filepath: Union[str, os.PathLike]):
         """Read the a CSV file and convert the data to a list of FunctionProfileData dictionaries"""
         with open(filepath, 'r', encoding="utf-8") as csv_file:
             reader = csv.DictReader(csv_file)
@@ -86,10 +87,10 @@ class FunctionProfile:
                 functions.append(FunctionProfileData.model_validate(row))
         return cls(functions)
 
-    def len(self):
+    def len(self) -> int:
         """Return number of functions tracked"""
         return len(self.functions)
 
-    def cycles(self):
+    def cycles(self) -> int:
         """calculate how many cycles are recorded in the profile"""
         return sum(fn.self_cycles for fn in self.functions)
